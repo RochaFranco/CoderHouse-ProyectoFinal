@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void FixedUpdate()
@@ -47,6 +49,14 @@ public class PlayerBehaviour : MonoBehaviour
             mainCamera.SetActive(false);
             Screamer.SetActive(true);
             screamerCamera.SetActive(true);
+            StartCoroutine(timer()); ;
         }
     }
+
+    IEnumerator timer()
+    {
+        yield return new WaitForSeconds(1.3f);
+        SceneManager.LoadScene(3);
+    }
+
 }
