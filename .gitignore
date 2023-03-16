@@ -32,7 +32,6 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 [Bb]in/
-[Oo]bj/
 [Ll]og/
 [Ll]ogs/
 
@@ -403,7 +402,6 @@ FodyWeavers.xsd
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 /[Ll]ibrary/
 /[Tt]emp/
-/[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
